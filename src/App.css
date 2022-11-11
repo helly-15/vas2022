@@ -132,3 +132,15 @@
     padding: 20px;
     font-weight: bold;
 }
+
+.harry {
+    animation: slide-in 1000ms;
+}
+@keyframes slide-in {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}

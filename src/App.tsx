@@ -12,6 +12,7 @@ import siska from './siska.jpg'
 import tern from './tern.jpg'
 import rockstar from './rockstar.jpg'
 import final from './final.jpg'
+import harry from './harry.png'
 
 function App() {
     const [isStart, setIsStart] = useState(true)
@@ -25,6 +26,7 @@ function App() {
     const [isTern, setIsTern] = useState(false)
     const [isRockstar, setIsRockstar] = useState(false)
     const [isFinish, setIsFinish] = useState(false)
+    const [isHarry, setIsHarry] = useState(false)
     const [isToast, setIsToast] = useState(false)
     const [toastText, setToastText] = useState('Это что за покемон?')
     const showToast =(text:string)=>{
@@ -206,7 +208,7 @@ function App() {
                     <p className="App-text">
                         Молодец Васюль! От таких мозгов смотри какие волосы выросли!
                     </p>
-                    <button className="button-20" onClick={()=>{setIsStart(false);setIsZayac(true)}}>
+                    <button className="button-20" onClick={()=>{setIsFinish(false);setIsHarry(true)}}>
                         Получить подарочек
                     </button>
                     <button className="button-30" onClick={ () => {
@@ -215,6 +217,12 @@ function App() {
                     } }> Мои полномочия все
                     </button>
                 </div>
+            </header>
+            }
+
+            { isHarry && <header className="App-header">
+                <img src={ harry} className="App-logo harry" alt="logo"/>
+
             </header>
             }
 
